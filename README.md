@@ -31,13 +31,23 @@ To set up Porter5, run the shell script porterSetup.sh when entering the contain
 
 Before running Porter5 and Snekmer in the container, several steps must be done before running the program.
 Step 1: Place all of the replacement Porter5 code in the SecondarySnekmer folder (multi_fasta.py, split_fasta.py, etc) into the Porter5 folder. These need to replace the original Porter5 code located there.
+
 Step 2: Split the fasta files or other files into single-line files using the split_fasta.py code by using the command 'python split_fasta.py [large Fasta file location]'. This will create a directory in the same folder as the large fasta file containing the new split fasta files and named after the original fasta file.
+
 Step 2.5: If multiple large fasta files need to be split, run the command 'python runPorterMultiple.py [fasta files location]'. This will split all of the fasta files within the directory and then run 'multiple_fasta.py' without needing user input.
+
 Step 3: Once the file has been split, run 'python multiple_fasta.py [new directory made in step 2]' to get the final results from the secondary structure analysis.
+
 Step 4: To get the SS3 and SS8 files needed to run snekmer with the results from the secondary structure analysis, run 'python combineSecondary.py [directory location of results]'. The results directory location should be the same location as the original split fasta files; this will go through the files and combine them all back into a single SS3 or SS8 file for every original fasta file split during split_fasta.py or runPorterMultiple.py. The final file will be called [fasta name]ss8.fasta or [fasta name]ss3.fasta. 
+
 Step 5: Copy all ss3 fasta files into one folder for snekmer analysis and all ss8 fasta files into another folder for snekmer analysis. 
+
 Step 6: Copy the ss3 folder to the main directory and rename the folder to 'input'.
+
 Step 7: Copy the file 'config.yaml' from Snekmer/resources and place it in the main directory.
+
 Step 8: Run the command 'snekmer model --configfile config.yaml' to run Snekmer. The results will be located in the output folder.
+
 Step 9: Zip or rename the output folder to 'results_[time]_[fastaName]_ss3'
+
 Step 10: Repeat steps 6-9 for the ss8 directory and files.
