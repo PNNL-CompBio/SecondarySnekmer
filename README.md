@@ -31,6 +31,13 @@ To set up Porter5, run the shell script porterSetup.sh when entering the contain
 
 Before running Porter5 and Snekmer in the container, several steps must be done before running the program.
 
+QUICK SETUP:
+
+To automatically skip step 1 and also install the docker container along with setting up the container to immediately run Porter5, run ‘python SSnekmerDocker.py’ before continuing on with the following steps. 
+
+To automatically run Porter5 and Snekmer one after the other without having to follow the steps, after running SSnekmerDocker.py and starting the container run “python SecStructSnekmer.py [fasta file location]” to automatically be able to skip steps 2-10. 
+
+
 Step 1: Place all of the replacement Porter5 code in the SecondarySnekmer folder (multi_fasta.py, split_fasta.py, etc) into the Porter5 folder. These need to replace the original Porter5 code located there.
 
 Step 2: Split the fasta files or other files into single-line files using the split_fasta.py code by using the command 'python split_fasta.py [large Fasta file location]'. This will create a directory in the same folder as the large fasta file containing the new split fasta files and named after the original fasta file.
