@@ -37,6 +37,7 @@ To automatically skip step 1 and also install the docker container along with se
 
 To automatically run Porter5 and Snekmer one after the other without having to follow the steps, after running SSnekmerDocker.py and starting the container run “python SecStructSnekmer.py [fasta file location]” to automatically be able to skip steps 2-10. 
 
+STEP-BY-STEP SETUP:
 
 Step 1: Place all of the replacement Porter5 code in the SecondarySnekmer folder (multi_fasta.py, split_fasta.py, etc) into the Porter5 folder. These need to replace the original Porter5 code located there.
 
