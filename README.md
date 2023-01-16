@@ -35,7 +35,7 @@ QUICK SETUP:
 
 To automatically skip step 1 and also install the docker container along with setting up the container to immediately run Porter5, run ‘python SSnekmerDocker.py’ before continuing on with the following steps. 
 
-To automatically run Porter5 and Snekmer one after the other without having to follow the steps, after running SSnekmerDocker.py and starting the container run “python SecStructSnekmer.py [fasta file location]” to automatically be able to skip steps 2-10. 
+To automatically run Porter5 and Snekmer one after the other without having to follow the steps, after running SSnekmerDocker.py and starting the container run “python runSecondaryStructureSnekmer.py [fasta file location]” to automatically be able to skip steps 2-10. 
 
 STEP-BY-STEP SETUP:
 
