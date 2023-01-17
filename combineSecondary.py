@@ -5,7 +5,10 @@ from pathlib import Path
 import pathlib
 import pandas as pd
 
+#Combine the created SS3 and SS8 files from Porter5 into a single fasta file for each original fasta file inputted for examination with Snekmer.
+
 def combineSecondary(rootdirectory):
+    #rootdirectory should be the location of all of the fasta folders produced from Porter5
     rootdir = rootdirectory
     subfolders = [f.path for f in os.scandir(rootdir) if f.is_dir()]
     for subdir in subfolders:
