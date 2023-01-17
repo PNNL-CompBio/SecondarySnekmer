@@ -2,7 +2,7 @@
 import os
 import sys
 
-# check arguments
+# check arguments; the original fasta file location(s) must be specified before proceeding.
 if len(sys.argv) < 2:
     print("\n---->>You need to specify where the big fasta file is")
     exit()
